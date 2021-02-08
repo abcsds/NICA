@@ -1,0 +1,908 @@
+#
+# An unexpected error has been detected by HotSpot Virtual Machine:
+#
+#  Internal Error (53484152454432554E54494D450E4350500198), pid=18546, tid=38718384
+#
+# Java VM: Java HotSpot(TM) Client VM (1.5.0-b64 mixed mode)
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x08c54e00):  JavaThread "AWT-EventQueue-0" [_thread_in_Java, id=18601]
+
+Stack: [0x0246c000,0x024ed000),  sp=0x086cd820,  free space=100742k
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+V  [libjvm.so+0x2dcf73]
+V  [libjvm.so+0x119d6c]
+V  [libjvm.so+0x2857db]
+V  [libjvm.so+0x258d7c]
+C  [libmwjmi.so+0x19f60]
+C  [libmwbridge.so+0x19d0b]
+
+
+---------------  P R O C E S S  ---------------
+
+Java Threads: ( => current thread )
+  0xa67cf070 JavaThread "Image Fetcher 0" daemon [_thread_blocked, id=19952]
+  0xa67c6c18 JavaThread "Text-Layout" [_thread_blocked, id=18718]
+  0xa653a618 JavaThread "Prefs Updater" [_thread_blocked, id=18713]
+  0xa87479f8 JavaThread "TimerQueue" daemon [_thread_blocked, id=18603]
+=>0x08c54e00 JavaThread "AWT-EventQueue-0" [_thread_in_Java, id=18601]
+  0x08c54838 JavaThread "AWT-Shutdown" [_thread_blocked, id=18600]
+  0x08c48790 JavaThread "AWT-XAWT" daemon [_thread_in_native, id=18599]
+  0x08c3f4b0 JavaThread "Java2D Disposer" daemon [_thread_blocked, id=18598]
+  0x088307c8 JavaThread "Timer-0" [_thread_blocked, id=18597]
+  0x0874d468 JavaThread "Low Memory Detector" daemon [_thread_blocked, id=18595]
+  0x0874bf70 JavaThread "CompilerThread0" daemon [_thread_blocked, id=18594]
+  0x0874aff8 JavaThread "Signal Dispatcher" daemon [_thread_blocked, id=18593]
+  0x08742070 JavaThread "Finalizer" daemon [_thread_in_Java, id=18591]
+  0x08741220 JavaThread "Reference Handler" daemon [_thread_blocked, id=18590]
+  0x086e5d60 JavaThread "main" [_thread_in_native, id=18546]
+
+Other Threads:
+  0x0873cf20 VMThread [id=18589]
+  0x08768338 WatcherThread [id=18596]
+
+VM state:not at safepoint (normal execution)
+
+VM Mutex/Monitor currently owned by a thread: None
+
+Heap
+ def new generation   total 14848K, used 228K [0xa8830000, 0xa9840000, 0xaa030000)
+  eden space 13248K,   1% used [0xa8830000, 0xa8869008, 0xa9520000)
+  from space 1600K,   0% used [0xa96b0000, 0xa96b0000, 0xa9840000)
+  to   space 1600K,   0% used [0xa9520000, 0xa9520000, 0xa96b0000)
+ tenured generation   total 49152K, used 7756K [0xaa030000, 0xad030000, 0xae830000)
+   the space 49152K,  15% used [0xaa030000, 0xaa7c3148, 0xaa7c3200, 0xad030000)
+ compacting perm gen  total 20736K, used 20488K [0xae830000, 0xafc70000, 0xb0830000)
+   the space 20736K,  98% used [0xae830000, 0xafc323f0, 0xafc32400, 0xafc70000)
+No shared spaces configured.
+
+Dynamic libraries:
+00111000-0012f000 r-xp 00000000 00:1c 25067633   /usr/local/pkgs/matlab-r2006a/bin/glnx86/libmwmcr.so
+0012f000-00133000 rwxp 0001d000 00:1c 25067633   /usr/local/pkgs/matlab-r2006a/bin/glnx86/libmwmcr.so
+00133000-00135000 rwxp 00133000 00:00 0 
+00135000-0013d000 r-xp 00000000 00:1c 25133544   /usr/local/pkgs/matlab-r2006a/sys/os/glnx86/libgcc_s.so.1
+0013d000-0013e000 rwxp 00007000 00:1c 25133544   /usr/local/pkgs/matlab-r2006a/sys/os/glnx86/libgcc_s.so.1
+0013e000-00146000 r-xp 00000000 03:01 8651740    /lib/librt-2.3.6.so
+00146000-00147000 r-xp 00007000 03:01 8651740    /lib/librt-2.3.6.so
+00147000-00148000 rwxp 00008000 03:01 8651740    /lib/librt-2.3.6.so
+00148000-00152000 rwxp 00148000 00:00 0 
+00152000-00153000 r-xp 00000000 00:1c 25067564   /usr/local/pkgs/matlab-r2006a/bin/glnx86/libicudata.so.32.0
+00153000-00154000 rwxp 00000000 00:1c 25067564   /usr/local/pkgs/matlab-r2006a/bin/glnx86/libicudata.so.32.0
+00154000-0015d000 r-xp 00000000 00:1c 25067570   /usr/local/pkgs/matlab-r2006a/bin/glnx86/libicuio.so.32.0
+0015d000-0015f000 rwxp 00008000 00:1c 25067570   /usr/local/pkgs/matlab-r2006a/bin/glnx86/libicuio.so.32.0
+0015f000-0016c000 r-xp 00000000 00:1c 25067694   /usr/local/pkgs/matlab-r2006a/bin/glnx86/libz.so.1.1.4
+0016c000-0016e000 rwxp 0000d000 00:1c 25067694   /usr/local/pkgs/matlab-r2006a/bin/glnx86/libz.so.1.1.4
+0016e000-00178000 r-xp 00000000 00:1c 25067576   /usr/local/pkgs/matlab-r2006a/bin/glnx86/libmex.so
+00178000-0017a000 rwxp 0000a000 00:1c 25067576   /usr/local/pkgs/matlab-r2006a/bin/glnx86/libmex.so
+0017a000-00182000 r-xp 00000000 00:1c 25067574   /usr/local/pkgs/matlab-r2006a/bin/glnx86/libmat.so
+00182000-00184000 rwxp 00007000 00:1c 25067574   /usr/local/pkgs/matlab-r2006a/bin/glnx86/libmat.so
+00184000-001ad000 r-xp 00000000 00:1c 25067683   /usr/local/pkgs/matlab-r2006a/bin/glnx86/libuij.so
+001ad000-001b4000 rwxp 00028000 00:1c 25067683   /usr/local/pkgs/matlab-r2006a/bin/glnx86/libuij.so
+001b4000-001ba000 r-xp 00000000 00:1c 25067654   /usr/local/pkgs/matlab-r2006a/bin/glnx86/libmwuinone.so
+001ba000-001bb000 rwxp 00005000 00:1c 25067654   /usr/local/pkgs/matlab-r2006a/bin/glnx86/libmwuinone.so
+001bb000-001d4000 r-xp 00000000 00:1c 25067597   /usr/local/pkgs/matlab-r2006a/bin/glnx86/libmwdatasvcs.so
+001d4000-001d8000 rwxp 00018000 00:1c 25067597   /usr/local/pkgs/matlab-r2006a/bin/glnx86/libmwdatasvcs.so
+001d8000-001d9000 r-xp 00000000 00:1c 25067540   /usr/local/pkgs/matlab-r2006a/bin/glnx86/libMTwister.so
+001d9000-001da000 rwxp 00001000 00:1c 25067540   /usr/local/pkgs/matlab-r2006a/bin/glnx86/libMTwister.so
+001da000-001e1000 r-xp 00000000 03:01 14730474   /usr/X11R6/lib/libXp.so.6.2
+001e1000-001e2000 rwxp 00006000 03:01 14730474   /usr/X11R6/lib/libXp.so.6.2
+001e2000-001e3000 r-xp 001e2000 00:00 0 
+001e3000-00212000 r-xp 00000000 00:1c 25067611   /usr/local/pkgs/matlab-r2006a/bin/glnx86/libmwjmi.so
+00212000-00219000 rwxp 0002f000 00:1c 25067611   /usr/local/pkgs/matlab-r2006a/bin/glnx86/libmwjmi.so
+00219000-0021a000 rwxp 00219000 00:00 0 
+0021a000-002ca000 r-xp 00000000 00:1c 25133547   /usr/local/pkgs/matlab-r2006a/sys/os/glnx86/libstdc++.so.6.0.3
+002ca000-002e2000 rwxp 000af000 00:1c 25133547   /usr/local/pkgs/matlab-r2006a/sys/os/glnx86/libstdc++.so.6.0.3
+002e2000-002e7000 rwxp 002e2000 00:00 0 
+002e7000-003e5000 r-xp 00000000 00:1c 25067567   /usr/local/pkgs/matlab-r2006a/bin/glnx86/libicui18n.so.32.0
+003e5000-00403000 rwxp 000fd000 00:1c 25067567   /usr/local/pkgs/matlab-r2006a/bin/glnx86/libicui18n.so.32.0
+00403000-00404000 rwxp 00403000 00:00 0 
+00404000-00405000 r-xp 00000000 03:01 14879102   /usr/X11R6/lib/X11/locale/lib/common/xlcUTF8Load.so.2
+00405000-00406000 rwxp 00000000 03:01 14879102   /usr/X11R6/lib/X11/locale/lib/common/xlcUTF8Load.so.2
+00406000-00407000 r-xp 00000000 00:1c 25067672   /usr/local/pkgs/matlab-r2006a/bin/glnx86/libnativeservices.so
+00407000-00408000 rwxp 00000000 00:1c 25067672   /usr/local/pkgs/matlab-r2006a/bin/glnx86/libnativeservices.so
+00408000-004ac000 r-xp 00000000 00:1c 25067617   /usr/local/pkgs/matlab-r2006a/bin/glnx86/libmwm_dispatcher.so
+004ac000-004bb000 rwxp 000a4000 00:1c 25067617   /usr/local/pkgs/matlab-r2006a/bin/glnx86/libmwm_dispatcher.so
+004bb000-004bc000 rwxp 004bb000 00:00 0 
+004bc000-004cf000 r-xp 00000000 00:1c 25067627   /usr/local/pkgs/matlab-r2006a/bin/glnx86/libmwm_pcodeio.so
+004cf000-004d1000 rwxp 00013000 00:1c 25067627   /usr/local/pkgs/matlab-r2006a/bin/glnx86/libmwm_pcodeio.so
+004d1000-004e5000 r-xp 00000000 00:1c 25067625   /usr/local/pkgs/matlab-r2006a/bin/glnx86/libmwm_pcodegen.so
+004e5000-004e8000 rwxp 00013000 00:1c 25067625   /usr/local/pkgs/matlab-r2006a/bin/glnx86/libmwm_pcodegen.so
+004e8000-004f2000 r-xp 00000000 00:1c 25067609   /usr/local/pkgs/matlab-r2006a/bin/glnx86/libmwir_xfmr.so
+004f2000-004f3000 rwxp 0000a000 00:1c 25067609   /usr/local/pkgs/matlab-r2006a/bin/glnx86/libmwir_xfmr.so
+004f3000-004f4000 r-xp 00000000 00:1c 25100416   /usr/local/pkgs/matlab-r2006a/sys/java/jre/glnx86/jre1.5.0/lib/i386/libjawt.so
+004f4000-004f5000 rwxp 00000000 00:1c 25100416   /usr/local/pkgs/matlab-r2006a/sys/java/jre/glnx86/jre1.5.0/lib/i386/libjawt.so
+004f5000-0053d000 r-xp 00000000 00:1c 25067662   /usr/local/pkgs/matlab-r2006a/bin/glnx86/libmx.so
+0053d000-00543000 rwxp 00048000 00:1c 25067662   /usr/local/pkgs/matlab-r2006a/bin/glnx86/libmx.so
+00543000-00547000 r-xp 00000000 00:1c 25067595   /usr/local/pkgs/matlab-r2006a/bin/glnx86/libmwcolamd.so
+00547000-00548000 rwxp 00003000 00:1c 25067595   /usr/local/pkgs/matlab-r2006a/bin/glnx86/libmwcolamd.so
+00548000-0054c000 r-xp 00000000 00:1c 25067583   /usr/local/pkgs/matlab-r2006a/bin/glnx86/libmwamd.so
+0054c000-0054d000 rwxp 00003000 00:1c 25067583   /usr/local/pkgs/matlab-r2006a/bin/glnx86/libmwamd.so
+0054d000-0054f000 r-xp 00000000 00:1c 25067666   /usr/local/pkgs/matlab-r2006a/bin/glnx86/libnativejava.so
+0054f000-00550000 rwxp 00001000 00:1c 25067666   /usr/local/pkgs/matlab-r2006a/bin/glnx86/libnativejava.so
+00550000-00565000 r-xp 00000000 00:1c 25067638   /usr/local/pkgs/matlab-r2006a/bin/glnx86/libmwmpath.so
+00565000-00568000 rwxp 00015000 00:1c 25067638   /usr/local/pkgs/matlab-r2006a/bin/glnx86/libmwmpath.so
+00568000-0056a000 rwxp 00568000 00:00 0 
+0056a000-00572000 r-xp 00000000 03:01 14722325   /usr/X11R6/lib/libSM.so.6.0
+00572000-00573000 rwxp 00007000 03:01 14722325   /usr/X11R6/lib/libSM.so.6.0
+00573000-0057b000 r-xp 00000000 03:01 8650809    /lib/libnss_nis-2.3.6.so
+0057b000-0057c000 r-xp 00007000 03:01 8650809    /lib/libnss_nis-2.3.6.so
+0057c000-0057d000 rwxp 00008000 03:01 8650809    /lib/libnss_nis-2.3.6.so
+0057d000-00581000 r-xp 00000000 03:01 8650801    /lib/libnss_dns-2.3.6.so
+00581000-00582000 r-xp 00003000 03:01 8650801    /lib/libnss_dns-2.3.6.so
+00582000-00583000 rwxp 00004000 03:01 8650801    /lib/libnss_dns-2.3.6.so
+00583000-00584000 r-xp 00000000 00:1c 25067670   /usr/local/pkgs/matlab-r2006a/bin/glnx86/libnativemlint.so
+00584000-00585000 rwxp 00000000 00:1c 25067670   /usr/local/pkgs/matlab-r2006a/bin/glnx86/libnativemlint.so
+00589000-0064c000 r-xp 00000000 00:1c 25067573   /usr/local/pkgs/matlab-r2006a/bin/glnx86/libicuuc.so.32.0
+0064c000-0065f000 rwxp 000c2000 00:1c 25067573   /usr/local/pkgs/matlab-r2006a/bin/glnx86/libicuuc.so.32.0
+0065f000-00660000 rwxp 0065f000 00:00 0 
+00660000-006ba000 r-xp 00000000 00:1c 25067652   /usr/local/pkgs/matlab-r2006a/bin/glnx86/libmwudd_mi.so
+006ba000-006c8000 rwxp 00059000 00:1c 25067652   /usr/local/pkgs/matlab-r2006a/bin/glnx86/libmwudd_mi.so
+006c8000-006c9000 rwxp 006c8000 00:00 0 
+006c9000-006d2000 r-xp 00000000 03:01 14717845   /usr/X11R6/lib/libXcursor.so.1.0.2
+006d2000-006d3000 rwxp 00008000 03:01 14717845   /usr/X11R6/lib/libXcursor.so.1.0.2
+006d8000-00803000 r-xp 00000000 00:1c 25067646   /usr/local/pkgs/matlab-r2006a/bin/glnx86/libmwservices.so
+00803000-0081c000 rwxp 0012a000 00:1c 25067646   /usr/local/pkgs/matlab-r2006a/bin/glnx86/libmwservices.so
+0081c000-00830000 rwxp 0081c000 00:00 0 
+00830000-0085c000 r-xp 00000000 00:1c 25067603   /usr/local/pkgs/matlab-r2006a/bin/glnx86/libmwhardcopy.so
+0085c000-00860000 rwxp 0002b000 00:1c 25067603   /usr/local/pkgs/matlab-r2006a/bin/glnx86/libmwhardcopy.so
+00860000-00861000 rwxp 00860000 00:00 0 
+00861000-00872000 r-xp 00000000 03:01 8651742    /lib/libnsl-2.3.6.so
+00872000-00873000 r-xp 00010000 03:01 8651742    /lib/libnsl-2.3.6.so
+00873000-00874000 rwxp 00011000 03:01 8651742    /lib/libnsl-2.3.6.so
+00874000-00876000 rwxp 00874000 00:00 0 
+00878000-00892000 r-xp 00000000 03:01 8650884    /lib/ld-2.3.6.so
+00892000-00893000 r-xp 00019000 03:01 8650884    /lib/ld-2.3.6.so
+00893000-00894000 rwxp 0001a000 03:01 8650884    /lib/ld-2.3.6.so
+0089a000-009bd000 r-xp 00000000 03:01 8651729    /lib/libc-2.3.6.so
+009bd000-009bf000 r-xp 00122000 03:01 8651729    /lib/libc-2.3.6.so
+009bf000-009c1000 rwxp 00124000 03:01 8651729    /lib/libc-2.3.6.so
+009c1000-009c3000 rwxp 009c1000 00:00 0 
+009c5000-009e8000 r-xp 00000000 03:01 8651730    /lib/libm-2.3.6.so
+009e8000-009e9000 r-xp 00022000 03:01 8651730    /lib/libm-2.3.6.so
+009e9000-009ea000 rwxp 00023000 03:01 8651730    /lib/libm-2.3.6.so
+009ec000-009ee000 r-xp 00000000 03:01 8651731    /lib/libdl-2.3.6.so
+009ee000-009ef000 r-xp 00001000 03:01 8651731    /lib/libdl-2.3.6.so
+009ef000-009f0000 rwxp 00002000 03:01 8651731    /lib/libdl-2.3.6.so
+009f0000-00a77000 r-xp 00000000 00:1c 25067629   /usr/local/pkgs/matlab-r2006a/bin/glnx86/libmwmathutil.so
+00a77000-00a7e000 rwxp 00086000 00:1c 25067629   /usr/local/pkgs/matlab-r2006a/bin/glnx86/libmwmathutil.so
+00a7e000-00a7f000 rwxp 00a7e000 00:00 0 
+00a7f000-00ad1000 r-xp 00000000 03:01 14720895   /usr/X11R6/lib/libXt.so.6.0
+00ad1000-00ad5000 rwxp 00051000 03:01 14720895   /usr/X11R6/lib/libXt.so.6.0
+00ad5000-00ad6000 rwxp 00ad5000 00:00 0 
+00ad6000-00adc000 r-xp 00000000 00:1c 25100434   /usr/local/pkgs/matlab-r2006a/sys/java/jre/glnx86/jre1.5.0/lib/i386/native_threads/libhpi.so
+00adc000-00add000 rwxp 00006000 00:1c 25100434   /usr/local/pkgs/matlab-r2006a/sys/java/jre/glnx86/jre1.5.0/lib/i386/native_threads/libhpi.so
+00add000-00aeb000 r-xp 00000000 03:01 8651732    /lib/libpthread-2.3.6.so
+00aeb000-00aec000 r-xp 0000d000 03:01 8651732    /lib/libpthread-2.3.6.so
+00aec000-00aed000 rwxp 0000e000 03:01 8651732    /lib/libpthread-2.3.6.so
+00aed000-00aef000 rwxp 00aed000 00:00 0 
+00af1000-00aff000 r-xp 00000000 03:01 14717679   /usr/X11R6/lib/libXext.so.6.4
+00aff000-00b00000 rwxp 0000d000 03:01 14717679   /usr/X11R6/lib/libXext.so.6.4
+00b00000-00b2d000 r-xp 00000000 00:1c 25067615   /usr/local/pkgs/matlab-r2006a/bin/glnx86/libmwlapack.so
+00b2d000-00b30000 rwxp 0002c000 00:1c 25067615   /usr/local/pkgs/matlab-r2006a/bin/glnx86/libmwlapack.so
+00b30000-00b37000 r-xp 00000000 03:01 14717680   /usr/X11R6/lib/libXrender.so.1.2.2
+00b37000-00b38000 rwxp 00007000 03:01 14717680   /usr/X11R6/lib/libXrender.so.1.2.2
+00b38000-00b3e000 r-xp 00000000 00:1c 25100426   /usr/local/pkgs/matlab-r2006a/sys/java/jre/glnx86/jre1.5.0/lib/i386/libnio.so
+00b3e000-00b3f000 rwxp 00005000 00:1c 25100426   /usr/local/pkgs/matlab-r2006a/sys/java/jre/glnx86/jre1.5.0/lib/i386/libnio.so
+00b3f000-00b60000 r-xp 00000000 00:1c 25067587   /usr/local/pkgs/matlab-r2006a/bin/glnx86/libmwbridge.so
+00b60000-00b66000 rwxp 00021000 00:1c 25067587   /usr/local/pkgs/matlab-r2006a/bin/glnx86/libmwbridge.so
+00b66000-00b6f000 rwxp 00b66000 00:00 0 
+00b6f000-00b86000 r-xp 00000000 03:01 14724937   /usr/X11R6/lib/libICE.so.6.3
+00b86000-00b87000 rwxp 00016000 03:01 14724937   /usr/X11R6/lib/libICE.so.6.3
+00b87000-00b89000 rwxp 00b87000 00:00 0 
+00b89000-00b94000 r-xp 00000000 00:1c 25100429   /usr/local/pkgs/matlab-r2006a/sys/java/jre/glnx86/jre1.5.0/lib/i386/libverify.so
+00b94000-00b95000 rwxp 0000b000 00:1c 25100429   /usr/local/pkgs/matlab-r2006a/sys/java/jre/glnx86/jre1.5.0/lib/i386/libverify.so
+00b97000-00b98000 r-xp 00b97000 00:00 0          [vdso]
+00b98000-00c2b000 r-xp 00000000 00:1c 25067650   /usr/local/pkgs/matlab-r2006a/bin/glnx86/libmwudd.so
+00c2b000-00c4c000 rwxp 00092000 00:1c 25067650   /usr/local/pkgs/matlab-r2006a/bin/glnx86/libmwudd.so
+00c4c000-00c4d000 rwxp 00c4c000 00:00 0 
+00c4d000-00c5c000 r-xp 00000000 03:01 8651736    /lib/libresolv-2.3.6.so
+00c5c000-00c5d000 r-xp 0000e000 03:01 8651736    /lib/libresolv-2.3.6.so
+00c5d000-00c5e000 rwxp 0000f000 03:01 8651736    /lib/libresolv-2.3.6.so
+00c5e000-00c60000 rwxp 00c5e000 00:00 0 
+00c60000-00c66000 r-xp 00000000 00:1c 25067668   /usr/local/pkgs/matlab-r2006a/bin/glnx86/libnativelex.so
+00c66000-00c67000 rwxp 00005000 00:1c 25067668   /usr/local/pkgs/matlab-r2006a/bin/glnx86/libnativelex.so
+00c67000-00d0e000 r-xp 00000000 00:1c 25067685   /usr/local/pkgs/matlab-r2006a/bin/glnx86/libut.so
+00d0e000-00d25000 rwxp 000a7000 00:1c 25067685   /usr/local/pkgs/matlab-r2006a/bin/glnx86/libut.so
+00d25000-00d54000 rwxp 00d25000 00:00 0 
+00d54000-00e3b000 r-xp 00000000 00:1c 25067631   /usr/local/pkgs/matlab-r2006a/bin/glnx86/libmwmcos.so
+00e3b000-00e5f000 rwxp 000e6000 00:1c 25067631   /usr/local/pkgs/matlab-r2006a/bin/glnx86/libmwmcos.so
+00e5f000-00e89000 r-xp 00000000 00:1c 25067635   /usr/local/pkgs/matlab-r2006a/bin/glnx86/libmwmlib.so
+00e89000-00ee0000 rwxp 00029000 00:1c 25067635   /usr/local/pkgs/matlab-r2006a/bin/glnx86/libmwmlib.so
+00ee3000-00eec000 r-xp 00000000 03:01 8650804    /lib/libnss_files-2.3.6.so
+00eec000-00eed000 r-xp 00008000 03:01 8650804    /lib/libnss_files-2.3.6.so
+00eed000-00eee000 rwxp 00009000 03:01 8650804    /lib/libnss_files-2.3.6.so
+00ef4000-00ef7000 r-xp 00000000 00:1c 25133548   /usr/local/pkgs/matlab-r2006a/sys/os/glnx86/libtermcap.so
+00ef7000-00ef8000 rwxp 00002000 00:1c 25133548   /usr/local/pkgs/matlab-r2006a/sys/os/glnx86/libtermcap.so
+00ef8000-00f2f000 r-xp 00000000 00:1c 25067591   /usr/local/pkgs/matlab-r2006a/bin/glnx86/libmwcholmod.so
+00f2f000-00f30000 rwxp 00037000 00:1c 25067591   /usr/local/pkgs/matlab-r2006a/bin/glnx86/libmwcholmod.so
+00f30000-00f59000 r-xp 00000000 00:1c 25067558   /usr/local/pkgs/matlab-r2006a/bin/glnx86/libguide.so
+00f59000-00f5b000 rwxp 00028000 00:1c 25067558   /usr/local/pkgs/matlab-r2006a/bin/glnx86/libguide.so
+00f5b000-00f60000 rwxp 00f5b000 00:00 0 
+00f60000-00f66000 r-xp 00000000 00:1c 25067664   /usr/local/pkgs/matlab-r2006a/bin/glnx86/libnativehg.so
+00f66000-00f67000 rwxp 00005000 00:1c 25067664   /usr/local/pkgs/matlab-r2006a/bin/glnx86/libnativehg.so
+00f67000-00f6d000 r-xp 00000000 00:1c 25133573   /usr/local/pkgs/matlab-r2006a/toolbox/matlab/graph2d/private/lineseriesmex.mexglx
+00f6d000-00f6f000 rwxp 00005000 00:1c 25133573   /usr/local/pkgs/matlab-r2006a/toolbox/matlab/graph2d/private/lineseriesmex.mexglx
+00f70000-00f80000 r-xp 00000000 00:1c 25067640   /usr/local/pkgs/matlab-r2006a/bin/glnx86/libmwmvalue.so
+00f80000-00f83000 rwxp 0000f000 00:1c 25067640   /usr/local/pkgs/matlab-r2006a/bin/glnx86/libmwmvalue.so
+00f83000-01383000 r-xp 00000000 00:1c 25067619   /usr/local/pkgs/matlab-r2006a/bin/glnx86/libmwm_interpreter.so
+01383000-013ee000 rwxp 00400000 00:1c 25067619   /usr/local/pkgs/matlab-r2006a/bin/glnx86/libmwm_interpreter.so
+013ee000-01443000 rwxp 013ee000 00:00 0 
+01443000-01512000 r-xp 00000000 03:01 14717678   /usr/X11R6/lib/libX11.so.6.2
+01512000-01516000 rwxp 000cf000 03:01 14717678   /usr/X11R6/lib/libX11.so.6.2
+01516000-0159d000 r-xp 00000000 00:1c 25067546   /usr/local/pkgs/matlab-r2006a/bin/glnx86/libfftw3.so.3
+0159d000-015a6000 rwxp 00087000 00:1c 25067546   /usr/local/pkgs/matlab-r2006a/bin/glnx86/libfftw3.so.3
+015a6000-0162c000 r-xp 00000000 00:1c 25067549   /usr/local/pkgs/matlab-r2006a/bin/glnx86/libfftw3f.so.3
+0162c000-01635000 rwxp 00085000 00:1c 25067549   /usr/local/pkgs/matlab-r2006a/bin/glnx86/libfftw3f.so.3
+01635000-0167a000 r-xp 00000000 00:1c 25067578   /usr/local/pkgs/matlab-r2006a/bin/glnx86/libmkl.so
+0167a000-0167b000 rwxp 00044000 00:1c 25067578   /usr/local/pkgs/matlab-r2006a/bin/glnx86/libmkl.so
+0167b000-01688000 rwxp 0167b000 00:00 0 
+01688000-01a72000 r-xp 00000000 00:1c 25067538   /usr/local/pkgs/matlab-r2006a/bin/glnx86/lapack.so
+01a72000-01a74000 rwxp 003e9000 00:1c 25067538   /usr/local/pkgs/matlab-r2006a/bin/glnx86/lapack.so
+01a74000-01b78000 rwxp 01a74000 00:00 0 
+01b78000-01b92000 r-xp 00000000 00:1c 25133543   /usr/local/pkgs/matlab-r2006a/sys/os/glnx86/libg2c.so.0.0.0
+01b92000-01b94000 rwxp 00019000 00:1c 25133543   /usr/local/pkgs/matlab-r2006a/sys/os/glnx86/libg2c.so.0.0.0
+01b94000-01b96000 rwxp 01b94000 00:00 0 
+01b96000-01bb7000 r-xp 00000000 00:1c 25100411   /usr/local/pkgs/matlab-r2006a/sys/java/jre/glnx86/jre1.5.0/lib/i386/libjava.so
+01bb7000-01bb9000 rwxp 00020000 00:1c 25100411   /usr/local/pkgs/matlab-r2006a/sys/java/jre/glnx86/jre1.5.0/lib/i386/libjava.so
+01bb9000-01bc6000 rwxp 01bb9000 00:00 0 
+01bc6000-01c39000 rwxp 01bc6000 00:00 0 
+01c39000-01c42000 rwxp 01c39000 00:00 0 
+01c42000-01c45000 rwxp 01c42000 00:00 0 
+01c45000-01c5d000 rwxp 01c45000 00:00 0 
+01c5d000-01c69000 rwxp 01c5d000 00:00 0 
+01c69000-01c74000 rwxp 01c69000 00:00 0 
+01c74000-01c83000 rwxp 01c74000 00:00 0 
+01c83000-01c8f000 rwxp 01c83000 00:00 0 
+01c8f000-01c95000 rwxp 01c8f000 00:00 0 
+01c98000-01d5d000 r-xp 00000000 00:1c 25067623   /usr/local/pkgs/matlab-r2006a/bin/glnx86/libmwm_parser.so
+01d5d000-01e85000 rwxp 000c4000 00:1c 25067623   /usr/local/pkgs/matlab-r2006a/bin/glnx86/libmwm_parser.so
+01e85000-01e9e000 rwxp 01e85000 00:00 0 
+01e9e000-01eaa000 rwxp 01e9e000 00:00 0 
+01eaa000-01ead000 --xp 01eaa000 00:00 0 
+01ead000-01f2b000 rwxp 01ead000 00:00 0 
+01f2b000-01f2e000 --xp 01f2b000 00:00 0 
+01f2e000-01fac000 rwxp 01f2e000 00:00 0 
+01fac000-01faf000 --xp 01fac000 00:00 0 
+01faf000-0202d000 rwxp 01faf000 00:00 0 
+0202d000-02030000 --xp 0202d000 00:00 0 
+02030000-020ae000 rwxp 02030000 00:00 0 
+020ae000-020af000 --xp 020ae000 00:00 0 
+020af000-0212f000 rwxp 020af000 00:00 0 
+0212f000-02143000 r-xp 00000000 00:1c 25100425   /usr/local/pkgs/matlab-r2006a/sys/java/jre/glnx86/jre1.5.0/lib/i386/libnet.so
+02143000-02144000 rwxp 00013000 00:1c 25100425   /usr/local/pkgs/matlab-r2006a/sys/java/jre/glnx86/jre1.5.0/lib/i386/libnet.so
+0214b000-0214c000 --xp 0214b000 00:00 0 
+0214c000-021cc000 rwxp 0214c000 00:00 0 
+021cc000-02240000 r-xp 00000000 00:1c 25100400   /usr/local/pkgs/matlab-r2006a/sys/java/jre/glnx86/jre1.5.0/lib/i386/libawt.so
+02240000-02246000 rwxp 00074000 00:1c 25100400   /usr/local/pkgs/matlab-r2006a/sys/java/jre/glnx86/jre1.5.0/lib/i386/libawt.so
+02246000-0226a000 rwxp 02246000 00:00 0 
+0226a000-02330000 r-xp 00000000 00:1c 25100423   /usr/local/pkgs/matlab-r2006a/sys/java/jre/glnx86/jre1.5.0/lib/i386/libmlib_image.so
+02330000-02331000 rwxp 000c5000 00:1c 25100423   /usr/local/pkgs/matlab-r2006a/sys/java/jre/glnx86/jre1.5.0/lib/i386/libmlib_image.so
+02331000-02366000 r-xp 00000000 00:1c 25100440   /usr/local/pkgs/matlab-r2006a/sys/java/jre/glnx86/jre1.5.0/lib/i386/xawt/libmawt.so
+02366000-0236a000 rwxp 00034000 00:1c 25100440   /usr/local/pkgs/matlab-r2006a/sys/java/jre/glnx86/jre1.5.0/lib/i386/xawt/libmawt.so
+0236a000-023dd000 r-xp 00000000 00:1c 25100405   /usr/local/pkgs/matlab-r2006a/sys/java/jre/glnx86/jre1.5.0/lib/i386/libfontmanager.so
+023dd000-023e7000 rwxp 00073000 00:1c 25100405   /usr/local/pkgs/matlab-r2006a/sys/java/jre/glnx86/jre1.5.0/lib/i386/libfontmanager.so
+023e7000-023eb000 rwxp 023e7000 00:00 0 
+023eb000-023ee000 --xp 023eb000 00:00 0 
+023ee000-0246c000 rwxp 023ee000 00:00 0 
+0246c000-0246f000 --xp 0246c000 00:00 0 
+0246f000-024ed000 rwxp 0246f000 00:00 0 
+024ed000-024f0000 --xp 024ed000 00:00 0 
+024f0000-0256e000 rwxp 024f0000 00:00 0 
+0256e000-02571000 --xp 0256e000 00:00 0 
+02571000-025ef000 rwxp 02571000 00:00 0 
+025ef000-025f2000 rwxp 025ef000 00:00 0 
+025f2000-02670000 rwxp 025f2000 00:00 0 
+02670000-02673000 --xp 02670000 00:00 0 
+02673000-026f1000 rwxp 02673000 00:00 0 
+026f1000-0277f000 r-xp 00000000 00:1c 25067589   /usr/local/pkgs/matlab-r2006a/bin/glnx86/libmwbuiltins.so
+0277f000-02792000 rwxp 0008e000 00:1c 25067589   /usr/local/pkgs/matlab-r2006a/bin/glnx86/libmwbuiltins.so
+02792000-02794000 rwxp 02792000 00:00 0 
+02794000-0279d000 r-xp 00000000 03:01 14879105   /usr/X11R6/lib/X11/locale/lib/common/xomGeneric.so.2
+0279d000-0279e000 rwxp 00008000 03:01 14879105   /usr/X11R6/lib/X11/locale/lib/common/xomGeneric.so.2
+02800000-0281d000 r-xp 00000000 03:01 14879100   /usr/X11R6/lib/X11/locale/lib/common/ximcp.so.2
+0281d000-0281f000 rwxp 0001c000 03:01 14879100   /usr/X11R6/lib/X11/locale/lib/common/ximcp.so.2
+02823000-029b0000 r-xp 00000000 00:1c 25133541   /usr/local/pkgs/matlab-r2006a/sys/os/glnx86/libXm.so.2.1
+029b0000-029c4000 rwxp 0018c000 00:1c 25133541   /usr/local/pkgs/matlab-r2006a/sys/os/glnx86/libXm.so.2.1
+029c4000-029c5000 rwxp 029c4000 00:00 0 
+029c5000-029c6000 --xp 029c5000 00:00 0 
+029c6000-033c6000 rwxp 029c6000 00:00 0 
+03417000-0360f000 r-xp 00000000 00:1c 25067642   /usr/local/pkgs/matlab-r2006a/bin/glnx86/libmwnumerics.so
+0360f000-0361f000 rwxp 001f8000 00:1c 25067642   /usr/local/pkgs/matlab-r2006a/bin/glnx86/libmwnumerics.so
+0361f000-03622000 --xp 0361f000 00:00 0 
+03622000-036a0000 rwxp 03622000 00:00 0 
+036a0000-036a3000 rwxp 036a0000 00:00 0 
+036a3000-03721000 rwxp 036a3000 00:00 0 
+03983000-03993000 r-xp 00000000 00:1c 25067613   /usr/local/pkgs/matlab-r2006a/bin/glnx86/libmwjmi_mi.so
+03993000-03996000 rwxp 00010000 00:1c 25067613   /usr/local/pkgs/matlab-r2006a/bin/glnx86/libmwjmi_mi.so
+03a4c000-03a4f000 --xp 03a4c000 00:00 0 
+03a4f000-03acd000 rwxp 03a4f000 00:00 0 
+03acd000-03eb4000 r-xp 00000000 00:1c 25067581   /usr/local/pkgs/matlab-r2006a/bin/glnx86/libmkl_p4.so
+03eb4000-03f52000 rwxp 003e7000 00:1c 25067581   /usr/local/pkgs/matlab-r2006a/bin/glnx86/libmkl_p4.so
+03f52000-03f5f000 rwxp 03f52000 00:00 0 
+04025000-04096000 r-xp 00000000 00:1c 25067660   /usr/local/pkgs/matlab-r2006a/bin/glnx86/libmwxmlcore.so
+04096000-040a7000 rwxp 00071000 00:1c 25067660   /usr/local/pkgs/matlab-r2006a/bin/glnx86/libmwxmlcore.so
+04476000-044fd000 r-xp 00000000 00:1c 25067601   /usr/local/pkgs/matlab-r2006a/bin/glnx86/libmwgui.so
+044fd000-0453c000 rwxp 00087000 00:1c 25067601   /usr/local/pkgs/matlab-r2006a/bin/glnx86/libmwgui.so
+048b9000-04b97000 r-xp 00000000 00:1c 25067689   /usr/local/pkgs/matlab-r2006a/bin/glnx86/libxerces-c.so.26.0
+04b97000-04c12000 rwxp 002de000 00:1c 25067689   /usr/local/pkgs/matlab-r2006a/bin/glnx86/libxerces-c.so.26.0
+04fa1000-0501b000 r-xp 00000000 00:1c 25067621   /usr/local/pkgs/matlab-r2006a/bin/glnx86/libmwm_ir.so
+0501b000-05037000 rwxp 0007a000 00:1c 25067621   /usr/local/pkgs/matlab-r2006a/bin/glnx86/libmwm_ir.so
+05037000-05042000 rwxp 05037000 00:00 0 
+0504c000-051ec000 r-xp 00000000 00:1c 25067605   /usr/local/pkgs/matlab-r2006a/bin/glnx86/libmwhg.so
+051ec000-0523e000 rwxp 0019f000 00:1c 25067605   /usr/local/pkgs/matlab-r2006a/bin/glnx86/libmwhg.so
+0523e000-05241000 rwxp 0523e000 00:00 0 
+05263000-05582000 r-xp 00000000 00:1c 25100394   /usr/local/pkgs/matlab-r2006a/sys/java/jre/glnx86/jre1.5.0/lib/i386/client/libjvm.so
+05582000-055a0000 rwxp 0031e000 00:1c 25100394   /usr/local/pkgs/matlab-r2006a/sys/java/jre/glnx86/jre1.5.0/lib/i386/client/libjvm.so
+055a0000-059b5000 rwxp 055a0000 00:00 0 
+05d70000-05d73000 --xp 05d70000 00:00 0 
+05d73000-05df1000 rwxp 05d73000 00:00 0 
+05e65000-05e68000 --xp 05e65000 00:00 0 
+05e68000-05ee6000 rwxp 05e68000 00:00 0 
+05f8b000-05f8e000 --xp 05f8b000 00:00 0 
+05f8e000-0600c000 rwxp 05f8e000 00:00 0 
+061aa000-061bd000 r-xp 00000000 00:1c 25100430   /usr/local/pkgs/matlab-r2006a/sys/java/jre/glnx86/jre1.5.0/lib/i386/libzip.so
+061bd000-061bf000 rwxp 00012000 00:1c 25100430   /usr/local/pkgs/matlab-r2006a/sys/java/jre/glnx86/jre1.5.0/lib/i386/libzip.so
+06446000-06564000 r-xp 00000000 00:1c 25067656   /usr/local/pkgs/matlab-r2006a/bin/glnx86/libmwuix.so
+06564000-0657a000 rwxp 0011e000 00:1c 25067656   /usr/local/pkgs/matlab-r2006a/bin/glnx86/libmwuix.so
+0657a000-0657e000 rwxp 0657a000 00:00 0 
+06633000-06682000 r-xp 00000000 00:1c 25067658   /usr/local/pkgs/matlab-r2006a/bin/glnx86/libmwumfpack.so
+06682000-06684000 rwxp 0004e000 00:1c 25067658   /usr/local/pkgs/matlab-r2006a/bin/glnx86/libmwumfpack.so
+066fc000-06720000 r-xp 00000000 00:1c 25067637   /usr/local/pkgs/matlab-r2006a/bin/glnx86/libmwmlint.so
+06720000-06725000 rwxp 00023000 00:1c 25067637   /usr/local/pkgs/matlab-r2006a/bin/glnx86/libmwmlint.so
+06725000-0672c000 rwxp 06725000 00:00 0 
+0672d000-0672e000 --xp 0672d000 00:00 0 
+0672e000-0712e000 rwxp 0672e000 00:00 0 
+08048000-0804a000 r-xp 00000000 00:1c 25067523   /usr/local/pkgs/matlab-r2006a/bin/glnx86/MATLAB
+0804a000-0804b000 rwxp 00001000 00:1c 25067523   /usr/local/pkgs/matlab-r2006a/bin/glnx86/MATLAB
+085a9000-08a60000 rwxp 085a9000 00:00 0 
+08a60000-08a62000 rwxp 08a60000 00:00 0 
+08a62000-08ab9000 rwxp 08a62000 00:00 0 
+08ab9000-08abb000 rwxp 08ab9000 00:00 0 
+08abb000-08ad3000 rwxp 08abb000 00:00 0 
+08ad3000-08ad4000 rwxp 08ad3000 00:00 0 
+08ad4000-08ad8000 rwxp 08ad4000 00:00 0 
+08ad8000-08ada000 rwxp 08ad8000 00:00 0 
+08ada000-08add000 rwxp 08ada000 00:00 0 
+08add000-08ade000 rwxp 08add000 00:00 0 
+08ade000-08ae7000 rwxp 08ade000 00:00 0 
+08ae7000-08ae8000 rwxp 08ae7000 00:00 0 
+08ae8000-08ae9000 rwxp 08ae8000 00:00 0 
+08ae9000-08aea000 rwxp 08ae9000 00:00 0 
+08aea000-08aed000 rwxp 08aea000 00:00 0 
+08aed000-08aef000 rwxp 08aed000 00:00 0 
+08aef000-08b0d000 rwxp 08aef000 00:00 0 
+08b0d000-08b0f000 rwxp 08b0d000 00:00 0 
+08b0f000-08b9a000 rwxp 08b0f000 00:00 0 
+08b9a000-08b9b000 rwxp 08b9a000 00:00 0 
+08b9b000-08e7b000 rwxp 08b9b000 00:00 0 
+08e7b000-08e7c000 rwxp 08e7b000 00:00 0 
+08e7c000-08eb4000 rwxp 08e7c000 00:00 0 
+08eb4000-08eb5000 rwxp 08eb4000 00:00 0 
+08eb5000-08eb6000 rwxp 08eb5000 00:00 0 
+08eb6000-08eb7000 rwxp 08eb6000 00:00 0 
+08eb7000-08ee7000 rwxp 08eb7000 00:00 0 
+08ee7000-08ee8000 rwxp 08ee7000 00:00 0 
+08ee8000-08efa000 rwxp 08ee8000 00:00 0 
+08efa000-08efc000 rwxp 08efa000 00:00 0 
+08efc000-08f02000 rwxp 08efc000 00:00 0 
+08f02000-08f03000 rwxp 08f02000 00:00 0 
+08f03000-08f0a000 rwxp 08f03000 00:00 0 
+08f0a000-08f0b000 rwxp 08f0a000 00:00 0 
+08f0b000-08f10000 rwxp 08f0b000 00:00 0 
+08f10000-08f11000 rwxp 08f10000 00:00 0 
+08f11000-08f22000 rwxp 08f11000 00:00 0 
+08f22000-08f23000 rwxp 08f22000 00:00 0 
+08f23000-08f2c000 rwxp 08f23000 00:00 0 
+08f2c000-08f31000 rwxp 08f2c000 00:00 0 
+08f31000-08f33000 rwxp 08f31000 00:00 0 
+08f33000-08f34000 rwxp 08f33000 00:00 0 
+08f34000-08f39000 rwxp 08f34000 00:00 0 
+08f39000-08f3a000 rwxp 08f39000 00:00 0 
+08f3a000-08f59000 rwxp 08f3a000 00:00 0 
+08f59000-08f5a000 rwxp 08f59000 00:00 0 
+08f5a000-08f5e000 rwxp 08f5a000 00:00 0 
+08f5e000-08f5f000 rwxp 08f5e000 00:00 0 
+08f5f000-08f64000 rwxp 08f5f000 00:00 0 
+08f64000-08f65000 rwxp 08f64000 00:00 0 
+08f65000-08f87000 rwxp 08f65000 00:00 0 
+08f87000-08f89000 rwxp 08f87000 00:00 0 
+08f89000-08fa1000 rwxp 08f89000 00:00 0 
+08fa1000-08fa2000 rwxp 08fa1000 00:00 0 
+08fa2000-08fa3000 rwxp 08fa2000 00:00 0 
+08fa3000-08fa4000 rwxp 08fa3000 00:00 0 
+08fa4000-08fb0000 rwxp 08fa4000 00:00 0 
+08fb0000-08fb1000 rwxp 08fb0000 00:00 0 
+08fb1000-08fbf000 rwxp 08fb1000 00:00 0 
+08fbf000-08fc0000 rwxp 08fbf000 00:00 0 
+08fc0000-08fc2000 rwxp 08fc0000 00:00 0 
+08fc2000-08fc4000 rwxp 08fc2000 00:00 0 
+08fc4000-08fc7000 rwxp 08fc4000 00:00 0 
+08fc7000-08fc8000 rwxp 08fc7000 00:00 0 
+08fc8000-08fc9000 rwxp 08fc8000 00:00 0 
+08fc9000-08fca000 rwxp 08fc9000 00:00 0 
+08fca000-08fd8000 rwxp 08fca000 00:00 0 
+08fd8000-08fd9000 rwxp 08fd8000 00:00 0 
+08fd9000-08fdd000 rwxp 08fd9000 00:00 0 
+08fdd000-08fdf000 rwxp 08fdd000 00:00 0 
+08fdf000-08fe1000 rwxp 08fdf000 00:00 0 
+08fe1000-08fe2000 rwxp 08fe1000 00:00 0 
+08fe2000-08fe8000 rwxp 08fe2000 00:00 0 
+08fe8000-08fee000 rwxp 08fe8000 00:00 0 
+08fee000-08fef000 rwxp 08fee000 00:00 0 
+08fef000-08ff0000 rwxp 08fef000 00:00 0 
+08ff0000-08ff2000 rwxp 08ff0000 00:00 0 
+08ff2000-08ff4000 rwxp 08ff2000 00:00 0 
+08ff4000-08ff7000 rwxp 08ff4000 00:00 0 
+08ff7000-08ff8000 rwxp 08ff7000 00:00 0 
+08ff8000-08ff9000 rwxp 08ff8000 00:00 0 
+08ff9000-08ffa000 rwxp 08ff9000 00:00 0 
+08ffa000-08ffc000 rwxp 08ffa000 00:00 0 
+08ffc000-08ffd000 rwxp 08ffc000 00:00 0 
+08ffd000-09001000 rwxp 08ffd000 00:00 0 
+09001000-09002000 rwxp 09001000 00:00 0 
+09002000-09005000 rwxp 09002000 00:00 0 
+09005000-09006000 rwxp 09005000 00:00 0 
+09006000-09011000 rwxp 09006000 00:00 0 
+09011000-09012000 rwxp 09011000 00:00 0 
+09012000-09017000 rwxp 09012000 00:00 0 
+09017000-09018000 rwxp 09017000 00:00 0 
+09018000-0905d000 rwxp 09018000 00:00 0 
+0905d000-0905e000 rwxp 0905d000 00:00 0 
+0905e000-09078000 rwxp 0905e000 00:00 0 
+09078000-09079000 rwxp 09078000 00:00 0 
+09079000-0908a000 rwxp 09079000 00:00 0 
+0908a000-0908b000 rwxp 0908a000 00:00 0 
+0908b000-0908f000 rwxp 0908b000 00:00 0 
+0908f000-09091000 rwxp 0908f000 00:00 0 
+09091000-090ea000 rwxp 09091000 00:00 0 
+090ea000-090eb000 rwxp 090ea000 00:00 0 
+090eb000-090ef000 rwxp 090eb000 00:00 0 
+090ef000-090f0000 rwxp 090ef000 00:00 0 
+090f0000-090f8000 rwxp 090f0000 00:00 0 
+090f8000-090f9000 rwxp 090f8000 00:00 0 
+090f9000-09101000 rwxp 090f9000 00:00 0 
+09101000-09102000 rwxp 09101000 00:00 0 
+09102000-09103000 rwxp 09102000 00:00 0 
+09103000-09104000 rwxp 09103000 00:00 0 
+09104000-09134000 rwxp 09104000 00:00 0          [heap]
+a5600000-a5621000 rwxp a5600000 00:00 0 
+a5621000-a5700000 --xp a5621000 00:00 0 
+a5800000-a5819000 rwxp a5800000 00:00 0 
+a5819000-a581a000 rwxp a5819000 00:00 0 
+a581a000-a5900000 rwxp a581a000 00:00 0 
+a592e000-a5d3c000 rwxp a592e000 00:00 0 
+a5d3c000-a5d3d000 rwxp a5d3c000 00:00 0 
+a5d3d000-a5d6d000 rwxp a5d3d000 00:00 0 
+a5d6d000-a5d6e000 rwxp a5d6d000 00:00 0 
+a5d6e000-a5d73000 rwxp a5d6e000 00:00 0 
+a5efc000-a5efd000 rwxp a5efc000 00:00 0 
+a5efd000-a5efe000 rwxp a5efd000 00:00 0 
+a5efe000-a5eff000 rwxp a5efe000 00:00 0 
+a5eff000-a5f05000 rwxp a5eff000 00:00 0 
+a5f05000-a5f07000 rwxp a5f05000 00:00 0 
+a5f07000-a5f08000 rwxp a5f07000 00:00 0 
+a5f08000-a5f0a000 rwxp a5f08000 00:00 0 
+a5f0a000-a5f17000 rwxp a5f0a000 00:00 0 
+a5f17000-a5f19000 rwxp a5f17000 00:00 0 
+a5f19000-a5f1a000 rwxp a5f19000 00:00 0 
+a5f1a000-a5f1c000 rwxp a5f1a000 00:00 0 
+a5f1c000-a5f1f000 rwxp a5f1c000 00:00 0 
+a5f1f000-a5f21000 rwxp a5f1f000 00:00 0 
+a5f21000-a5f22000 rwxp a5f21000 00:00 0 
+a5f22000-a5f3d000 rwxp a5f22000 00:00 0 
+a5fbd000-a5ffe000 rwxp a5fbd000 00:00 0 
+a603e000-a6042000 rwxp a603e000 00:00 0 
+a6042000-a6043000 rwxp a6042000 00:00 0 
+a6043000-a607f000 rwxp a6043000 00:00 0 
+a60bf000-a60c1000 rwxp a60bf000 00:00 0 
+a60c1000-a64c6000 rwxp a60c1000 00:00 0 
+a64c6000-a64c7000 rwxp a64c6000 00:00 0 
+a64c7000-a64c9000 rwxp a64c7000 00:00 0 
+a64c9000-a64ca000 rwxp a64c9000 00:00 0 
+a64ca000-a64cc000 rwxp a64ca000 00:00 0 
+a64cc000-a64cd000 rwxp a64cc000 00:00 0 
+a64cd000-a64ce000 rwxp a64cd000 00:00 0 
+a64ce000-a64cf000 rwxp a64ce000 00:00 0 
+a64cf000-a64d0000 rwxp a64cf000 00:00 0 
+a64d0000-a64d1000 rwxp a64d0000 00:00 0 
+a64d1000-a64d3000 rwxp a64d1000 00:00 0 
+a64d3000-a64d4000 rwxp a64d3000 00:00 0 
+a64d4000-a64d5000 rwxp a64d4000 00:00 0 
+a64d5000-a64d6000 rwxp a64d5000 00:00 0 
+a64d6000-a64d7000 rwxp a64d6000 00:00 0 
+a64d7000-a64d8000 rwxp a64d7000 00:00 0 
+a64d8000-a64e1000 rwxp a64d8000 00:00 0 
+a64e1000-a64e2000 rwxp a64e1000 00:00 0 
+a64e2000-a64e4000 rwxp a64e2000 00:00 0 
+a64e4000-a64e8000 rwxp a64e4000 00:00 0 
+a64e8000-a64e9000 rwxp a64e8000 00:00 0 
+a64e9000-a64ea000 rwxp a64e9000 00:00 0 
+a64ea000-a64ec000 rwxp a64ea000 00:00 0 
+a64ec000-a64f0000 rwxp a64ec000 00:00 0 
+a64f0000-a64f5000 rwxp a64f0000 00:00 0 
+a64f5000-a64f6000 rwxp a64f5000 00:00 0 
+a64f6000-a64fb000 rwxp a64f6000 00:00 0 
+a64fb000-a64fc000 rwxp a64fb000 00:00 0 
+a64fc000-a64fe000 rwxp a64fc000 00:00 0 
+a64fe000-a64ff000 rwxp a64fe000 00:00 0 
+a64ff000-a6503000 rwxp a64ff000 00:00 0 
+a6503000-a6504000 rwxp a6503000 00:00 0 
+a6504000-a6539000 rwxp a6504000 00:00 0 
+a6539000-a653b000 rwxp a6539000 00:00 0 
+a653b000-a657d000 rwxp a653b000 00:00 0 
+a657d000-a657e000 rwxp a657d000 00:00 0 
+a657e000-a65da000 rwxp a657e000 00:00 0 
+a65da000-a65db000 rwxp a65da000 00:00 0 
+a65db000-a65ea000 rwxp a65db000 00:00 0 
+a65ea000-a65ed000 rwxp a65ea000 00:00 0 
+a65ed000-a65ef000 rwxp a65ed000 00:00 0 
+a65ef000-a65f0000 rwxp a65ef000 00:00 0 
+a65f0000-a65ff000 rwxp a65f0000 00:00 0 
+a65ff000-a6600000 --xp a65ff000 00:00 0 
+a663f000-a664c000 rwxp a663f000 00:00 0 
+a664c000-a664d000 rwxp a664c000 00:00 0 
+a664d000-a6666000 rwxp a664d000 00:00 0 
+a6666000-a6667000 rwxp a6666000 00:00 0 
+a6667000-a666e000 rwxp a6667000 00:00 0 
+a666e000-a666f000 rwxp a666e000 00:00 0 
+a666f000-a6670000 rwxp a666f000 00:00 0 
+a6670000-a6671000 rwxp a6670000 00:00 0 
+a6671000-a6672000 rwxp a6671000 00:00 0 
+a6672000-a6673000 rwxp a6672000 00:00 0 
+a6673000-a6675000 rwxp a6673000 00:00 0 
+a6675000-a6676000 rwxp a6675000 00:00 0 
+a6676000-a667f000 rwxp a6676000 00:00 0 
+a667f000-a6681000 rwxp a667f000 00:00 0 
+a6681000-a6682000 rwxp a6681000 00:00 0 
+a6682000-a66aa000 rwxp a6682000 00:00 0 
+a66aa000-a66ab000 rwxp a66aa000 00:00 0 
+a66ab000-a66af000 rwxp a66ab000 00:00 0 
+a66af000-a66b0000 rwxp a66af000 00:00 0 
+a66b0000-a66b4000 rwxp a66b0000 00:00 0 
+a66b4000-a66b5000 rwxp a66b4000 00:00 0 
+a66b5000-a66bd000 rwxp a66b5000 00:00 0 
+a66bd000-a66cf000 rwxp a66bd000 00:00 0 
+a66cf000-a66d2000 rwxp a66cf000 00:00 0 
+a66d2000-a6701000 rwxp a66d2000 00:00 0 
+a6701000-a6702000 rwxp a6701000 00:00 0 
+a6702000-a6783000 rwxp a6702000 00:00 0 
+a6783000-a6784000 rwxp a6783000 00:00 0 
+a6784000-a6789000 rwxp a6784000 00:00 0 
+a6789000-a678a000 rwxp a6789000 00:00 0 
+a678a000-a678c000 rwxp a678a000 00:00 0 
+a678c000-a678d000 rwxp a678c000 00:00 0 
+a678d000-a6791000 rwxp a678d000 00:00 0 
+a6791000-a6792000 rwxp a6791000 00:00 0 
+a6792000-a679b000 rwxp a6792000 00:00 0 
+a679b000-a679d000 rwxp a679b000 00:00 0 
+a679d000-a679e000 rwxp a679d000 00:00 0 
+a679e000-a679f000 rwxp a679e000 00:00 0 
+a679f000-a67a0000 rwxp a679f000 00:00 0 
+a67a0000-a67a1000 rwxp a67a0000 00:00 0 
+a67a1000-a67a4000 rwxp a67a1000 00:00 0 
+a67a4000-a67a5000 rwxp a67a4000 00:00 0 
+a67a5000-a67a6000 rwxp a67a5000 00:00 0 
+a67a6000-a67a7000 rwxp a67a6000 00:00 0 
+a67a7000-a67a8000 rwxp a67a7000 00:00 0 
+a67a8000-a67a9000 rwxp a67a8000 00:00 0 
+a67a9000-a67d6000 rwxp a67a9000 00:00 0 
+a67d6000-a67d7000 rwxp a67d6000 00:00 0 
+a67d7000-a67fe000 rwxp a67d7000 00:00 0 
+a67fe000-a6800000 --xp a67fe000 00:00 0 
+a681d000-a683e000 rwxp a681d000 00:00 0 
+a683e000-a683f000 rwxp a683e000 00:00 0 
+a683f000-a6840000 rwxp a683f000 00:00 0 
+a6840000-a6841000 rwxp a6840000 00:00 0 
+a6841000-a6843000 rwxp a6841000 00:00 0 
+a6843000-a6844000 rwxp a6843000 00:00 0 
+a6844000-a6848000 rwxp a6844000 00:00 0 
+a6848000-a6849000 rwxp a6848000 00:00 0 
+a6849000-a684a000 rwxp a6849000 00:00 0 
+a684a000-a684b000 rwxp a684a000 00:00 0 
+a684b000-a684c000 rwxp a684b000 00:00 0 
+a684c000-a684e000 rwxp a684c000 00:00 0 
+a684e000-a686f000 rwxp a684e000 00:00 0 
+a686f000-a6871000 rwxp a686f000 00:00 0 
+a6871000-a6873000 rwxp a6871000 00:00 0 
+a6873000-a6874000 rwxp a6873000 00:00 0 
+a6874000-a6877000 rwxp a6874000 00:00 0 
+a6877000-a6878000 rwxp a6877000 00:00 0 
+a6878000-a687c000 rwxp a6878000 00:00 0 
+a687c000-a687d000 rwxp a687c000 00:00 0 
+a687d000-a68c0000 rwxp a687d000 00:00 0 
+a68c0000-a68c5000 rwxp a68c0000 00:00 0 
+a68c5000-a68c6000 rwxp a68c5000 00:00 0 
+a68c6000-a68e5000 rwxp a68c6000 00:00 0 
+a68e5000-a6963000 rwxp a68e5000 00:00 0 
+a6963000-a6964000 rwxp a6963000 00:00 0 
+a6964000-a6973000 rwxp a6964000 00:00 0 
+a6973000-a6974000 rwxp a6973000 00:00 0 
+a6974000-a6a00000 rwxp a6974000 00:00 0 
+a6a01000-a6a4e000 rwxp a6a01000 00:00 0 
+a6a4e000-a6a50000 rwxp a6a4e000 00:00 0 
+a6a50000-a6a59000 rwxp a6a50000 00:00 0 
+a6a59000-a6a5d000 rwxp a6a59000 00:00 0 
+a6a5d000-a6a6b000 rwxp a6a5d000 00:00 0 
+a6a6b000-a6a6d000 rwxp a6a6b000 00:00 0 
+a6a6d000-a6a7a000 rwxp a6a6d000 00:00 0 
+a6a7a000-a6a7b000 rwxp a6a7a000 00:00 0 
+a6a7b000-a6a7e000 rwxp a6a7b000 00:00 0 
+a6a7e000-a6a7f000 rwxp a6a7e000 00:00 0 
+a6a7f000-a6a86000 rwxp a6a7f000 00:00 0 
+a6a8e000-a6b81000 rwxp a6a8e000 00:00 0 
+a6b81000-a6b83000 rwxp a6b81000 00:00 0 
+a6b83000-a6bba000 rwxp a6b83000 00:00 0 
+a6bba000-a6bbb000 rwxp a6bba000 00:00 0 
+a6bbb000-a6bfe000 rwxp a6bbb000 00:00 0 
+a6bfe000-a6c00000 --xp a6bfe000 00:00 0 
+a6c0f000-a6c10000 rwxp a6c0f000 00:00 0 
+a6c20000-a6c91000 rwxp a6c20000 00:00 0 
+a6c91000-a6c92000 rwxp a6c91000 00:00 0 
+a6c92000-a6c9e000 rwxp a6c92000 00:00 0 
+a6c9e000-a6ca0000 rwxp a6c9e000 00:00 0 
+a6ca0000-a6ca1000 rwxp a6ca0000 00:00 0 
+a6ca1000-a6ca3000 rwxp a6ca1000 00:00 0 
+a6ca3000-a6ca4000 rwxp a6ca3000 00:00 0 
+a6ca4000-a6cbb000 rwxp a6ca4000 00:00 0 
+a6cbb000-a6cbd000 rwxp a6cbb000 00:00 0 
+a6cbd000-a6cca000 rwxp a6cbd000 00:00 0 
+a6cca000-a6ccc000 rwxp a6cca000 00:00 0 
+a6ccc000-a6cce000 rwxp a6ccc000 00:00 0 
+a6cce000-a6cd1000 rwxp a6cce000 00:00 0 
+a6cd1000-a6cd2000 rwxp a6cd1000 00:00 0 
+a6cd2000-a6cd3000 rwxp a6cd2000 00:00 0 
+a6cd3000-a6ce7000 rwxp a6cd3000 00:00 0 
+a6ce7000-a6d11000 rwxp a6ce7000 00:00 0 
+a6d11000-a6eb8000 r-xs 00000000 00:1c 25166194   /usr/local/pkgs/matlab-r2006a/java/jarext/xercesImpl.jar
+a6eb8000-a6ed3000 r-xs 00000000 00:1c 25166195   /usr/local/pkgs/matlab-r2006a/java/jarext/xml-apis.jar
+a6ed3000-a6fb1000 r-xs 00000000 00:1c 25166192   /usr/local/pkgs/matlab-r2006a/java/jarext/xalan.jar
+a6fb1000-a6fcc000 r-xs 00000000 00:1c 25166191   /usr/local/pkgs/matlab-r2006a/java/jarext/wsdl4j.jar
+a6fcc000-a6fdf000 r-xs 00000000 00:1c 25166189   /usr/local/pkgs/matlab-r2006a/java/jarext/vb20.jar
+a6fdf000-a7078000 r-xs 00000000 00:1c 25166187   /usr/local/pkgs/matlab-r2006a/java/jarext/saxon.jar
+a7078000-a707d000 r-xs 00000000 00:1c 25166186   /usr/local/pkgs/matlab-r2006a/java/jarext/saaj.jar
+a707d000-a7098000 r-xs 00000000 00:1c 25166185   /usr/local/pkgs/matlab-r2006a/java/jarext/mwucarunits.jar
+a7098000-a7145000 r-xs 00000000 00:1c 25166184   /usr/local/pkgs/matlab-r2006a/java/jarext/mail.jar
+a7145000-a7198000 r-xs 00000000 00:1c 25166183   /usr/local/pkgs/matlab-r2006a/java/jarext/looks-1.3.2.jar
+a7198000-a71b6000 r-xs 00000000 00:1c 25166182   /usr/local/pkgs/matlab-r2006a/java/jarext/junit.jar
+a71b6000-a71bf000 r-xs 00000000 00:1c 25166181   /usr/local/pkgs/matlab-r2006a/java/jarext/jaxrpc.jar
+a71bf000-a71cb000 r-xs 00000000 00:1c 25166180   /usr/local/pkgs/matlab-r2006a/java/jarext/jaccess-1_4.jar
+a71cb000-a71f2000 r-xs 00000000 00:1c 25166148   /usr/local/pkgs/matlab-r2006a/java/jarext/J2PrinterWorks.jar
+a71f2000-a722d000 r-xs 00000000 00:1c 25166179   /usr/local/pkgs/matlab-r2006a/java/jarext/ice/icessl.jar
+a722d000-a722e000 r-xs 00000000 00:1c 25166178   /usr/local/pkgs/matlab-r2006a/java/jarext/ice/ib6xalan.jar
+a722e000-a7246000 r-xs 00000000 00:1c 25166177   /usr/local/pkgs/matlab-r2006a/java/jarext/ice/ib6util.jar
+a7246000-a7256000 r-xs 00000000 00:1c 25166176   /usr/local/pkgs/matlab-r2006a/java/jarext/ice/ib6swing.jar
+a7256000-a729e000 r-xs 00000000 00:1c 25166175   /usr/local/pkgs/matlab-r2006a/java/jarext/ice/ib6js.jar
+a729e000-a729f000 r-xs 00000000 00:1c 25166174   /usr/local/pkgs/matlab-r2006a/java/jarext/ice/ib6https.jar
+a729f000-a72b8000 r-xs 00000000 00:1c 25166173   /usr/local/pkgs/matlab-r2006a/java/jarext/ice/ib6http.jar
+a72b8000-a72cc000 r-xs 00000000 00:1c 25166172   /usr/local/pkgs/matlab-r2006a/java/jarext/ice/ib6extra.jar
+a72cc000-a7356000 r-xs 00000000 00:1c 25166171   /usr/local/pkgs/matlab-r2006a/java/jarext/ice/ib6core.jar
+a7356000-a7373000 r-xs 00000000 00:1c 25166169   /usr/local/pkgs/matlab-r2006a/java/jarext/commons-net-1.0.0.jar
+a7373000-a737a000 r-xs 00000000 00:1c 25166164   /usr/local/pkgs/matlab-r2006a/java/jarext/commapi/comm.jar
+a737a000-a73ba000 r-xs 00000000 00:1c 25166162   /usr/local/pkgs/matlab-r2006a/java/jarext/collections.jar
+a73ba000-a74e8000 r-xs 00000000 00:1c 25166160   /usr/local/pkgs/matlab-r2006a/java/jarext/axis.jar
+a74e8000-a74f8000 r-xs 00000000 00:1c 25166158   /usr/local/pkgs/matlab-r2006a/java/jarext/avalon.jar
+a74f8000-a74ff000 r-xs 00000000 00:1c 25166157   /usr/local/pkgs/matlab-r2006a/java/jarext/audio.jar
+a74ff000-a75fc000 r-xs 00000000 00:1c 25166152   /usr/local/pkgs/matlab-r2006a/java/jarext/ant.jar
+a75fc000-a7617000 r-xs 00000000 00:1c 25166150   /usr/local/pkgs/matlab-r2006a/java/jarext/activation.jar
+a7617000-a7620000 r-xs 00000000 00:1c 25166149   /usr/local/pkgs/matlab-r2006a/java/jarext/access-bridge.jar
+a7620000-a7624000 r-xs 00000000 00:1c 25166146   /usr/local/pkgs/matlab-r2006a/java/jar/xml.jar
+a7624000-a7640000 r-xs 00000000 00:1c 25166143   /usr/local/pkgs/matlab-r2006a/java/jar/toolbox/timeseries.jar
+a7640000-a766d000 r-xs 00000000 00:1c 25166142   /usr/local/pkgs/matlab-r2006a/java/jar/toolbox/testmeas.jar
+a766d000-a76b0000 r-xs 00000000 00:1c 25166212   /usr/local/pkgs/matlab-r2006a/java/jar/toolbox/stats.jar
+a76b0000-a76d5000 r-xs 00000000 00:1c 25166222   /usr/local/pkgs/matlab-r2006a/java/jar/toolbox/stateflow.jar
+a76d5000-a7703000 r-xs 00000000 00:1c 25166225   /usr/local/pkgs/matlab-r2006a/java/jar/toolbox/slcontrol.jar
+a7703000-a77d3000 r-xs 00000000 00:1c 25166221   /usr/local/pkgs/matlab-r2006a/java/jar/toolbox/simulink.jar
+a77d3000-a77ee000 r-xs 00000000 00:1c 25166141   /usr/local/pkgs/matlab-r2006a/java/jar/toolbox/rptgencore.jar
+a77ee000-a780d000 r-xs 00000000 00:1c 25166215   /usr/local/pkgs/matlab-r2006a/java/jar/toolbox/optim.jar
+a780d000-a7842000 r-xs 00000000 00:1c 25166213   /usr/local/pkgs/matlab-r2006a/java/jar/toolbox/nnet.jar
+a7842000-a785c000 r-xs 00000000 00:1c 25166220   /usr/local/pkgs/matlab-r2006a/java/jar/toolbox/mdldisc.jar
+a785c000-a7996000 r-xs 00000000 00:1c 25166140   /usr/local/pkgs/matlab-r2006a/java/jar/toolbox/instrument.jar
+a7996000-a79b2000 r-xs 00000000 00:1c 25166196   /usr/local/pkgs/matlab-r2006a/java/jar/toolbox/images.jar
+a79b2000-a79dc000 r-xs 00000000 00:1c 25166216   /usr/local/pkgs/matlab-r2006a/java/jar/toolbox/gads.jar
+a79dc000-a79f9000 r-xs 00000000 00:1c 25166219   /usr/local/pkgs/matlab-r2006a/java/jar/toolbox/eml.jar
+a79f9000-a7a32000 r-xs 00000000 00:1c 25166224   /usr/local/pkgs/matlab-r2006a/java/jar/toolbox/ecoder.jar
+a7a32000-a7a56000 r-xs 00000000 00:1c 25166223   /usr/local/pkgs/matlab-r2006a/java/jar/toolbox/dspblks.jar
+a7a56000-a7a78000 r-xs 00000000 00:1c 25166217   /usr/local/pkgs/matlab-r2006a/java/jar/toolbox/dastudio.jar
+a7a78000-a7ad7000 r-xs 00000000 00:1c 25166218   /usr/local/pkgs/matlab-r2006a/java/jar/toolbox/curvefit.jar
+a7ad7000-a7b12000 r-xs 00000000 00:1c 25166139   /usr/local/pkgs/matlab-r2006a/java/jar/toolbox/control.jar
+a7b12000-a7b46000 r-xs 00000000 00:1c 25166210   /usr/local/pkgs/matlab-r2006a/java/jar/toolbox/compiler.jar
+a7b46000-a7b6c000 r-xs 00000000 00:1c 25166214   /usr/local/pkgs/matlab-r2006a/java/jar/toolbox/comm.jar
+a7b6c000-a7bd4000 r-xs 00000000 00:1c 25166197   /usr/local/pkgs/matlab-r2006a/java/jar/toolbox/bioinfo.jar
+a7bd4000-a7bda000 r-xs 00000000 00:1c 25166137   /usr/local/pkgs/matlab-r2006a/java/jar/timer.jar
+a7bda000-a7be9000 r-xs 00000000 00:1c 25166136   /usr/local/pkgs/matlab-r2006a/java/jar/services.jar
+a7be9000-a7d50000 r-xs 00000000 00:1c 25166135   /usr/local/pkgs/matlab-r2006a/java/jar/page.jar
+a7d50000-a7d55000 r-xs 00000000 00:1c 25166134   /usr/local/pkgs/matlab-r2006a/java/jar/org/openide.jar
+a7d55000-a7e6f000 r-xs 00000000 00:1c 25166133   /usr/local/pkgs/matlab-r2006a/java/jar/org/netbeans.jar
+a7e6f000-a7f32000 r-xs 00000000 00:1c 25166131   /usr/local/pkgs/matlab-r2006a/java/jar/mwt.jar
+a7f32000-a805d000 r-xs 00000000 00:1c 25166130   /usr/local/pkgs/matlab-r2006a/java/jar/mwswing.jar
+a805d000-a8160000 r-xs 00000000 00:1c 25166129   /usr/local/pkgs/matlab-r2006a/java/jar/mlwidgets.jar
+a8160000-a816f000 r-xs 00000000 00:1c 25166128   /usr/local/pkgs/matlab-r2006a/java/jar/mlservices.jar
+a816f000-a82d2000 r-xs 00000000 00:1c 25166127   /usr/local/pkgs/matlab-r2006a/java/jar/mde.jar
+a82d2000-a8305000 r-xs 00000000 00:1c 25166126   /usr/local/pkgs/matlab-r2006a/java/jar/jmi.jar
+a8305000-a83c5000 r-xs 00000000 00:1c 25166125   /usr/local/pkgs/matlab-r2006a/java/jar/ide.jar
+a83c5000-a846e000 r-xs 00000000 00:1c 25166124   /usr/local/pkgs/matlab-r2006a/java/jar/ice.jar
+a846e000-a84f9000 r-xs 00000000 00:1c 25166123   /usr/local/pkgs/matlab-r2006a/java/jar/hg.jar
+a84f9000-a8515000 r-xs 00000000 00:1c 25166122   /usr/local/pkgs/matlab-r2006a/java/jar/beans.jar
+a8515000-a8544000 r-xs 00000000 00:1c 25166121   /usr/local/pkgs/matlab-r2006a/java/jar/activation.jar
+a8544000-a85fb000 r-xs 00000000 00:1c 25166145   /usr/local/pkgs/matlab-r2006a/java/jar/widgets.jar
+a85fb000-a8617000 r-xs 00000000 00:1c 25166144   /usr/local/pkgs/matlab-r2006a/java/jar/util.jar
+a8617000-a863d000 r-xs 00000000 00:1c 25100355   /usr/local/pkgs/matlab-r2006a/sys/java/jre/glnx86/jre1.5.0/lib/ext/sunjce_provider.jar
+a863d000-a8700000 r-xs 00000000 00:1c 25100354   /usr/local/pkgs/matlab-r2006a/sys/java/jre/glnx86/jre1.5.0/lib/ext/localedata.jar
+a8700000-a8800000 rwxp a8700000 00:00 0 
+a8803000-a882e000 r-xs 00000000 00:1c 25100356   /usr/local/pkgs/matlab-r2006a/sys/java/jre/glnx86/jre1.5.0/lib/ext/sunpkcs11.jar
+a882e000-a8830000 r-xs 00000000 00:1c 25100353   /usr/local/pkgs/matlab-r2006a/sys/java/jre/glnx86/jre1.5.0/lib/ext/dnsns.jar
+a8830000-a9840000 rwxp a8830000 00:00 0 
+a9840000-aa030000 rwxp a9840000 00:00 0 
+aa030000-ad030000 rwxp aa030000 00:00 0 
+ad030000-ae830000 rwxp ad030000 00:00 0 
+ae830000-afc70000 rwxp ae830000 00:00 0 
+afc70000-b2430000 rwxp afc70000 00:00 0 
+b243b000-b2763000 rwxp b243b000 00:00 0 
+b2763000-b443b000 rwxp b2763000 00:00 0 
+b443b000-b4c59000 r-xs 00000000 00:1c 25100342   /usr/local/pkgs/matlab-r2006a/sys/java/jre/glnx86/jre1.5.0/lib/charsets.jar
+b4c59000-b4c6d000 r-xs 00000000 00:1c 25100474   /usr/local/pkgs/matlab-r2006a/sys/java/jre/glnx86/jre1.5.0/lib/jce.jar
+b4c6d000-b4ce6000 r-xs 00000000 00:1c 25100475   /usr/local/pkgs/matlab-r2006a/sys/java/jre/glnx86/jre1.5.0/lib/jsse.jar
+b4ce6000-b4d4e000 rwxp b4ce6000 00:00 0 
+b4d4e000-b6f09000 r-xs 00000000 00:1c 25100533   /usr/local/pkgs/matlab-r2006a/sys/java/jre/glnx86/jre1.5.0/lib/rt.jar
+b6f09000-b6f11000 rwxs 00000000 03:01 13500468   /tmp/hsperfdata_arno/18546
+b6f11000-b6f12000 r-xp b6f11000 00:00 0 
+b6f12000-b6f14000 rwxp b6f12000 00:00 0 
+b6f14000-b6f16000 rwxp b6f14000 00:00 0 
+b6f16000-b6f19000 rwxp b6f16000 00:00 0 
+b6f19000-b6f1a000 rwxp b6f19000 00:00 0 
+b6f1a000-b6f55000 rwxp b6f1a000 00:00 0 
+b6f55000-b6f5b000 rwxp b6f55000 00:00 0 
+b6f5b000-b6f94000 rwxp b6f5b000 00:00 0 
+b6f94000-b6f9b000 r-xs 00000000 03:01 14717689   /usr/lib/gconv/gconv-modules.cache
+b6f9b000-b6fcc000 rwxp b6f9b000 00:00 0 
+b6fcc000-b6fcd000 rwxp b6fcc000 00:00 0 
+b6fcd000-b6fe1000 rwxp b6fcd000 00:00 0 
+b6fe1000-b6fe3000 rwxp b6fe1000 00:00 0 
+b6fe3000-b6fe6000 rwxp b6fe3000 00:00 0 
+b6fe6000-b6feb000 rwxp b6fe6000 00:00 0 
+b6feb000-b6fef000 rwxp b6feb000 00:00 0 
+b6fef000-b6ff1000 rwxp b6fef000 00:00 0 
+b6ff1000-b6ff7000 rwxp b6ff1000 00:00 0 
+b6ff7000-b6ff9000 rwxp b6ff7000 00:00 0 
+b6ff9000-b6ffb000 rwxp b6ff9000 00:00 0 
+b6ffb000-b6ffe000 rwxp b6ffb000 00:00 0 
+b6ffe000-b7006000 rwxp b6ffe000 00:00 0 
+b7006000-b7009000 rwxp b7006000 00:00 0 
+b7009000-b7015000 rwxp b7009000 00:00 0 
+b7015000-b7017000 rwxp b7015000 00:00 0 
+b7017000-b701c000 rwxp b7017000 00:00 0 
+b701c000-b701f000 rwxp b701c000 00:00 0 
+b701f000-b7020000 rwxp b701f000 00:00 0 
+b7020000-b7022000 rwxp b7020000 00:00 0 
+b7022000-b7023000 rwxp b7022000 00:00 0 
+b7023000-b7024000 rwxp b7023000 00:00 0 
+b7024000-b705d000 rwxp b7024000 00:00 0 
+b705d000-b7069000 rwxp b705d000 00:00 0 
+b7069000-b706b000 rwxp b7069000 00:00 0 
+b706b000-b706c000 rwxp b706b000 00:00 0 
+b706c000-b70c2000 rwxp b706c000 00:00 0 
+b70c2000-b70c4000 rwxp b70c2000 00:00 0 
+b70c4000-b70c9000 rwxp b70c4000 00:00 0 
+b70c9000-b70cb000 rwxp b70c9000 00:00 0 
+b70cb000-b70cc000 rwxp b70cb000 00:00 0 
+b70cc000-b70ce000 rwxp b70cc000 00:00 0 
+b70ce000-b70cf000 rwxp b70ce000 00:00 0 
+b70cf000-b70d1000 rwxp b70cf000 00:00 0 
+b70d1000-b70d2000 rwxp b70d1000 00:00 0 
+b70d2000-b70d4000 rwxp b70d2000 00:00 0 
+b70d4000-b70d6000 rwxp b70d4000 00:00 0 
+b70d6000-b70d8000 rwxp b70d6000 00:00 0 
+b70d8000-b70db000 rwxp b70d8000 00:00 0 
+b70db000-b72db000 r-xp 00000000 03:01 14717451   /usr/lib/locale/locale-archive
+b72db000-b72f7000 rwxp b72db000 00:00 0 
+b72f7000-b72f9000 rwxp b72f7000 00:00 0 
+b72f9000-b72fc000 rwxp b72f9000 00:00 0 
+b72fc000-b72fd000 rwxp b72fc000 00:00 0 
+b72fd000-b7305000 rwxp b72fd000 00:00 0 
+b7305000-b7306000 rwxp b7305000 00:00 0 
+b7306000-b730a000 rwxp b7306000 00:00 0 
+b730a000-b730b000 rwxp b730a000 00:00 0 
+b730b000-b730d000 rwxp b730b000 00:00 0 
+b730d000-b730f000 rwxp b730d000 00:00 0 
+b730f000-b7310000 rwxp b730f000 00:00 0 
+b7310000-b7312000 rwxp b7310000 00:00 0 
+b7312000-b7317000 rwxp b7312000 00:00 0 
+b7317000-b7318000 rwxp b7317000 00:00 0 
+b7318000-b731e000 rwxp b7318000 00:00 0 
+b731e000-b731f000 rwxp b731e000 00:00 0 
+b731f000-b7321000 rwxp b731f000 00:00 0 
+b7321000-b7322000 rwxp b7321000 00:00 0 
+b7322000-b7323000 rwxp b7322000 00:00 0 
+b7323000-b7324000 rwxp b7323000 00:00 0 
+b7324000-b7328000 rwxp b7324000 00:00 0 
+b7328000-b732c000 rwxp b7328000 00:00 0 
+b732c000-b732d000 rwxp b732c000 00:00 0 
+b732d000-b732e000 rwxp b732d000 00:00 0 
+b732e000-b7334000 rwxp b732e000 00:00 0 
+b7334000-b7336000 rwxp b7334000 00:00 0 
+b7336000-b7337000 rwxp b7336000 00:00 0 
+b7337000-b7339000 rwxp b7337000 00:00 0 
+b7339000-b733b000 rwxp b7339000 00:00 0 
+b733b000-b733d000 rwxp b733b000 00:00 0 
+b733d000-b733e000 rwxp b733d000 00:00 0 
+b733e000-b7340000 rwxp b733e000 00:00 0 
+b7340000-b7342000 rwxp b7340000 00:00 0 
+b7342000-b7343000 rwxp b7342000 00:00 0 
+b7343000-b7344000 rwxp b7343000 00:00 0 
+b7344000-b7345000 rwxp b7344000 00:00 0 
+b7345000-b7346000 rwxp b7345000 00:00 0 
+b7346000-b734a000 rwxp b7346000 00:00 0 
+b734a000-b734c000 rwxp b734a000 00:00 0 
+b734c000-b734e000 rwxp b734c000 00:00 0 
+b734e000-b7350000 rwxp b734e000 00:00 0 
+b7350000-b7351000 rwxp b7350000 00:00 0 
+b7351000-b7352000 rwxp b7351000 00:00 0 
+b7352000-b7354000 rwxp b7352000 00:00 0 
+b7354000-b7357000 rwxp b7354000 00:00 0 
+b7357000-b735c000 rwxp b7357000 00:00 0 
+b735c000-b739e000 rwxp b735c000 00:00 0 
+b739e000-b739f000 rwxp b739e000 00:00 0 
+b739f000-b73b8000 rwxp b739f000 00:00 0 
+b73b8000-b73bd000 rwxp b73b8000 00:00 0 
+b73bd000-b73dd000 rwxp b73bd000 00:00 0 
+b73dd000-b7401000 rwxp b73dd000 00:00 0 
+b7401000-b741f000 rwxp b7401000 00:00 0 
+b741f000-b742f000 rwxp b741f000 00:00 0 
+b742f000-b7435000 rwxp b742f000 00:00 0 
+b7435000-b7436000 rwxp b7435000 00:00 0 
+b7436000-b7480000 rwxp b7436000 00:00 0 
+b7480000-b7482000 rwxp b7480000 00:00 0 
+b7482000-b7485000 rwxp b7482000 00:00 0 
+b7485000-b7486000 rwxp b7485000 00:00 0 
+b7486000-b7488000 rwxp b7486000 00:00 0 
+b7488000-b748a000 rwxp b7488000 00:00 0 
+b748a000-b748b000 rwxp b748a000 00:00 0 
+b748b000-b748c000 rwxp b748b000 00:00 0 
+b748c000-b7491000 rwxp b748c000 00:00 0 
+b7491000-b7492000 rwxp b7491000 00:00 0 
+b7492000-b7496000 rwxp b7492000 00:00 0 
+b7496000-b7498000 rwxp b7496000 00:00 0 
+b7498000-b7623000 rwxp b7498000 00:00 0 
+b7623000-b7f76000 r-xs 00000000 00:1c 25067537   /usr/local/pkgs/matlab-r2006a/bin/glnx86/icudt32l.dat
+b7f76000-b7f85000 rwxp b7f76000 00:00 0 
+b7f86000-b7f8e000 r-xs 00000000 00:1c 25166167   /usr/local/pkgs/matlab-r2006a/java/jarext/commons-logging.jar
+b7f8e000-b7fa0000 r-xs 00000000 00:1c 25166165   /usr/local/pkgs/matlab-r2006a/java/jarext/commons-discovery.jar
+b7fa0000-b7fa3000 rwxp b7fa0000 00:00 0 
+bf89f000-bf8a2000 --xp bf89f000 00:00 0 
+bf8a2000-bfa9f000 rwxp bf8a2000 00:00 0          [stack]
+bfa9f000-bfaa3000 rw-p bfa9f000 00:00 0 
+
+VM Arguments:
+jvm_args: -Xms64m -Xmx96m -XX:NewRatio=3 -XX:MaxPermSize=32M -Djava.util.prefs.PreferencesFactory=com.mathworks.util.DisabledPreferencesFactory -Djava.library.path=/usr/local/pkgs/matlab-r2006a/bin/glnx86 vfprintf abort
+java_command: <unknown>
+
+Environment Variables:
+JAVA_HOME=/usr/local/pkgs/jdk-1.1.8/jdk1.1.8
+CLASSPATH=/usr/local/pkgs/jdk-1.1.8/jdk1.1.8/lib/classes.zip:.:~
+PATH=/home/arno/bin:/home/arno/bin/bin:/home/arno/nrn/i686/bin:/data/common/matlab/:/data/common/scripts/:.:/usr/local/pkgs/sge/bin/glinux:/usr/local/pkgs/sge/bin/glinux:/home/arno/bin:/home/arno/bin/bin:/home/arno/nrn/i686/bin:/data/common/matlab/:/data/common/scripts/:.:/usr/local/pkgs/sge/bin/glinux:/usr/local/pkgs/sge/bin/glinux:/usr/local/pkgs/matlab/etc:/usr/local/pkgs/matlab/bin:/usr/kerberos/bin:/usr/local/bin:/usr/bin:/bin:/usr/X11R6/bin:/data/common/scripts
+USERNAME=arno
+LD_LIBRARY_PATH=/usr/local/pkgs/matlab-r2006a/sys/os/glnx86:/usr/local/pkgs/matlab-r2006a/bin/glnx86:/usr/local/pkgs/matlab-r2006a/extern/lib/glnx86:/usr/local/pkgs/matlab-r2006a/sys/java/jre/glnx86/jre1.5.0/lib/i386/native_threads:/usr/local/pkgs/matlab-r2006a/sys/java/jre/glnx86/jre1.5.0/lib/i386/client:/usr/local/pkgs/matlab-r2006a/sys/java/jre/glnx86/jre1.5.0/lib/i386:/usr/local/pkgs/mysql-3.23.49/lib/mysql:/usr/local/pkgs/sge/lib/glinux:/usr/local/pkgs/sge/lib/glinux
+SHELL=/bin/tcsh
+DISPLAY=:0.0
+HOSTTYPE=i386-linux
+OSTYPE=linux
+ARCH=glnx86
+MACHTYPE=i386
+
+
+---------------  S Y S T E M  ---------------
+
+OS:Fedora Core release 4 (Stentz)
+
+uname:Linux 2.6.15-1.1833_FC4smp #1 SMP Wed Mar 1 23:56:51 EST 2006 i686
+libc:glibc 2.3.6 NPTL 2.3.6 
+rlimit: STACK 10240k, CORE 0k, NPROC 57335, NOFILE 1024, AS infinity
+load average:0.01 0.05 0.07
+
+CPU:total 4 family 15, cmov, cx8, fxsr, mmx, sse, sse2, ht
+
+Memory: 4k page, physical 884k(366k free), swap 2500k(2500k free)
+
+vm_info: Java HotSpot(TM) Client VM (1.5.0-b64) for linux-x86, built on Sep 15 2004 03:56:41 by java_re with gcc 3.2.1-7a (J2SE release)
+

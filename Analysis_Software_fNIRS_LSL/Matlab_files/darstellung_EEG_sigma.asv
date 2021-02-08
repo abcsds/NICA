@@ -1,0 +1,118 @@
+function darstellung_EEG_sigma(c,EEG,fs)
+%  (c)Gï¿½nther Bauernfeind
+
+% This file (darstellung_etg_sigma) is part of "NIRS" a programm to compute the concentration
+% change of Hb and HbO2 from the rawdata files *.gdf recorded with the Graz-NIRS-system
+% and for validation this data with recorded data from the Hitachi ETG-4000
+% *.gdf.
+
+Timing=NIRx.settings.Timing;
+Anfang=NIRx.settings.Anfang;
+Ende=NIRx.settings.Ende;
+kanal=NIRx.settings.kanal;
+probeset=NIRx.settings.probeset;
+STD=NIRx.settings.STD;
+DisplaySteps=NIRx.settings.DisplaySteps;
+
+
+      if c==1
+          subplot(8,7,4);set(gca,'ytick',[]); set(gca,'xtick',[]); end
+      if c==2
+          subplot(8,7,5);set(gca,'ytick',[]); set(gca,'xtick',[]); end
+      if c==3
+          subplot(8,7,20);set(gca,'ytick',[]); set(gca,'xtick',[]); end
+      if c==4
+          subplot(8,7,21);set(gca,'ytick',[]); set(gca,'xtick',[]); end
+      if c==5
+          subplot(8,7,25);set(gca,'ytick',[]); set(gca,'xtick',[]); end
+      if c==6
+          subplot(8,7,32);set(gca,'ytick',[]); set(gca,'xtick',[]); end
+      if c==7
+          subplot(8,7,36);set(gca,'ytick',[]); set(gca,'xtick',[]); end
+      if c==8
+          subplot(8,7,37);set(gca,'ytick',[]); set(gca,'xtick',[]); end
+      if c==9
+          subplot(8,7,41);set(gca,'ytick',[]); set(gca,'xtick',[]); end
+      if c==10
+          subplot(8,7,42);set(gca,'ytick',[]); set(gca,'xtick',[]); end
+      if c==11
+          subplot(8,7,48);set(gca,'ytick',[]); set(gca,'xtick',[]); end
+      if c==12
+          subplot(8,7,47);set(gca,'ytick',[]); set(gca,'xtick',[]); end
+      if c==13
+          subplot(8,7,51);set(gca,'ytick',[]); set(gca,'xtick',[]); end
+      if c==14
+          subplot(8,7,52);set(gca,'ytick',[]); set(gca,'xtick',[]); end
+      if c==15
+          subplot(8,7,54);set(gca,'ytick',[]); set(gca,'xtick',[]); end
+      if c==16
+          subplot(8,7,53);set(gca,'ytick',[]); set(gca,'xtick',[]); end
+
+   
+      
+  t=1/fs:1/fs:size(EEG)/fs;
+
+      
+        h=plot(t',EEG,'b');
+        set(h,'LineWidth',2);
+        
+           
+        title(['Ch ' num2str(c)],'FontSize',6,'FontWeight', 'bold')
+        
+      
+
+
+        
+        
+        if DisplaySteps
+            if c==kanal
+%                 
+                 figure(200)
+                 
+                hold on
+                h=plot((t_trial/fs)',deoxy_signal,'b');
+                set(h,'LineWidth',2);
+                hold on
+                h=plot((t_trial/fs)',oxy_signal,'Color',[1 0.6 0.5]);
+                set(h,'LineWidth',2);
+                
+               % save ak4_ch2 deoxy_signal oxy_signal;
+                
+                if STD
+                    h=plot((t_trial/fs)',deoxy_signal+std_deoxy_signal,'b:');
+                    set(h,'LineWidth',2);
+                    h=plot((t_trial/fs)',deoxy_signal-std_deoxy_signal,'b:');
+                    set(h,'LineWidth',2);
+                    h=plot((t_trial/fs)',oxy_signal+std_oxy_signal,':','Color',[1 0.6 0.5]);
+                    set(h,'LineWidth',2);
+                    h=plot((t_trial/fs)',oxy_signal-std_oxy_signal,':','Color',[1 0.6 0.5]);
+                    set(h,'LineWidth',2);
+                end
+                ax=([Timing(1,1) Timing(1,2) -0.50 0.50]);
+                axis(ax);
+
+                line([Anfang Anfang], [ax(1,3) ax(1,4)],'color','k','LineWidth',2);
+                line([Ende Ende], [ax(1,3) ax(1,4)],'color','k','LineWidth',2);
+                
+                    title(['gem. Konzentrationsänderung Kanal ' num2str(c)],'FontSize',12,'FontWeight','demi','Interpreter','none')
+%               
+                ylabel('(mM mm)','FontSize',12)
+                legend('[deoxy-Hb]','[oxy-Hb]')
+                end
+           
+        end
+end
+
+
+        
+        
+        
+              
+                    
+                    
+                    
+                    
+                    
+        
+        
+        
