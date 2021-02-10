@@ -60,3 +60,12 @@ Warning: Name is nonexistent or not a directory:
 > In path (line 109)
   In installNica (line 65)
 ```
+
+
+Getting error message for MATLAB R2017a, windows:
+
+```
+Error in File ./GUI/comparespectra.m at line 107:
+Undefined function smooth for input arguments of type 'double'.
+```
+this when running the analysis.
