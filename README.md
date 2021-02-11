@@ -63,9 +63,17 @@ Warning: Name is nonexistent or not a directory:
 
 
 Getting error message for MATLAB R2017a, windows:
-
 ```
 Error in File ./GUI/comparespectra.m at line 107:
 Undefined function smooth for input arguments of type 'double'.
 ```
 this when running the analysis.
+
+
+Error when running analysis on R2017b, Liux:
+```
+Error in File ./GUI/createevaluationpath.m at line 25:
+Subscript indices must either be real positive integers or logicals.
+```
+
+Error when saving user settings. File gets created inside `./GUI/`, where the program creates a folder called `User Settings` and puts the new settings inside this repo. Idealy it would ask where to save the settings.
